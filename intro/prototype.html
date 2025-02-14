@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const array = new Array();
+      // const array = [];
+
+      //   const str1 = new String("hello");
+      //   const str2 = "hello";
+
+      //   console.log(str1);
+      //   console.log(typeof str1);
+      //   console.log(str2);
+      //   console.log(typeof str2);
+
+      //   console.log(String.prototype);
+      //   console.log(Number.prototype);
+      //   console.log(Array.prototype);
+      //   console.log(Object.prototype);
+      //   console.log(BigInt.prototype);
+      //   console.log(Boolean.prototype);
+
+      Array.prototype.myMap = function (logicFunc) {
+        const result = [];
+        for (let i = 0; i < this.length; i++) {
+          result.push(logicFunc(this[i], i, this));
+        }
+
+        return result;
+      };
+
+      const array = [1, 2, 3, 4, 5];
+
+      const double1 = array.map((value) => value * 2);
+      const double2 = array.myMap((value) => value * 2);
+
+      console.log(double1);
+      console.log(double2);
+    </script>
+  </body>
+</html>

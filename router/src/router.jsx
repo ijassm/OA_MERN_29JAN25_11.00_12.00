@@ -2,6 +2,8 @@ import { createBrowserRouter, Navigate } from "react-router"
 import { Home } from "./pages/Home.jsx"
 import { About } from "./pages/About.jsx";
 import { Contact } from "./pages/Contact.jsx";
+import { ErrorPage } from "./pages/ErrorPage.jsx";
+import { NotFoundPage } from "./pages/NotFoundPage.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -10,6 +12,7 @@ export const router = createBrowserRouter([
     },
     {
         path: "/",
+        errorElement: <ErrorPage />,
         element: <Navigate to="home" />,
     },
     {
@@ -19,5 +22,9 @@ export const router = createBrowserRouter([
     {
         path: "contact",
         Component: Contact,
+    },
+    {
+        path: "*",
+        Component: NotFoundPage,
     },
 ]);

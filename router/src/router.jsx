@@ -4,6 +4,7 @@ import { About } from "./pages/About.jsx";
 import { Contact } from "./pages/Contact.jsx";
 import { ErrorPage } from "./pages/ErrorPage.jsx";
 import { NotFoundPage } from "./pages/NotFoundPage.jsx";
+import { Course } from "./pages/Course.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
     {
         path: "contact",
         Component: Contact,
+    },
+    {
+        path: "course",
+        Component: Course,
     },
     {
         path: "*",

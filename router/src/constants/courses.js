@@ -7,7 +7,7 @@ export const onlineCourses = [
         duration: "4 weeks",
         price: "$200",
         instructor: "John Doe",
-        image: "https://miro.medium.com/v2/resize:fit:1200/1*LyZcwuLWv2FArOumCxobpA.png",
+        image: "https://img-c.udemycdn.com/course/240x135/1518026_77fb_4.jpg",
         link: "https://www.udemy.com/course/the-complete-javascript-course/",
     },
     {
@@ -18,7 +18,7 @@ export const onlineCourses = [
         duration: "6 weeks",
         price: "$250",
         instructor: "Jane Smith",
-        image: "https://reactjs.org/logo-og.png",
+        image: "https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
         link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
@@ -29,7 +29,7 @@ export const onlineCourses = [
         duration: "5 weeks",
         price: "$220",
         instructor: "Mike Johnson",
-        image: "https://nodejs.org/static/images/logo.svg",
+        image: "https://img-c.udemycdn.com/course/240x135/461160_8d87_6.jpg",
         link: "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/",
     },
 ];
@@ -44,7 +44,7 @@ export const offlineCourses = [
         duration: "8 weeks",
         price: "$300",
         instructor: "Alice Johnson",
-        image: "https://www.python.org/community/logos/python-logo-master-v3-TM.png",
+        image: "https://img-c.udemycdn.com/course/240x135/919038_3ae1_15.jpg",
         link: "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/",
     },
     {
@@ -55,7 +55,7 @@ export const offlineCourses = [
         duration: "10 weeks",
         price: "$350",
         instructor: "Bob Brown",
-        image: "https://miro.medium.com/v2/resize:fit:1200/format:webp/1*Qx4Yt7Xc6m5Uj9i0vG9kqA.png",
+        image: "https://img-c.udemycdn.com/course/240x135/1151632_de9b.jpg",
         link: "https://www.udemy.com/course/machinelearning/",
     },
     {
@@ -66,7 +66,7 @@ export const offlineCourses = [
         duration: "12 weeks",
         price: "$400",
         instructor: "Charlie Green",
-        image: "https://www.freecodecamp.org/news/content/images/2020/10/full-stack.png",
+        image: "https://img-c.udemycdn.com/course/240x135/625204_436a_3.jpg",
         link: "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
     },
 ]

@@ -1,15 +1,26 @@
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Navbar } from "../components/navbar";
 import { useForm } from "react-hook-form";
+import { contactSchema } from "../validations/contact";
+import clsx from "clsx";
+import { Input } from "../components/ui/input";
+import { WithLabel } from "../components/ui/WithLabel";
+import { Button } from "../components/ui/Button";
 
 export const Contact = () => {
     // console.log(useForm());
 
-    console.log("rendered 😋");
+    // console.log("rendered 😋");
 
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(contactSchema),
+    });
 
     // console.log(register("name"), 'register("name")');
+
+    // console.log(errors, "errors");
+
 
     const onSubmitHandler = handleSubmit((data) => {
         console.log(data, "data");
@@ -26,32 +37,20 @@ export const Contact = () => {
                 <p className="text-lg">Have fun coding!</p>
                 <form onSubmit={onSubmitHandler} className="w-full">
                     <div className="my-4">
-                        <label className="block my-2" htmlFor="name">
-                            Name
-                        </label>
-                        <input
-                            className="border-black border-2 p-2 w-full focus:outline-orange-400"
-                            id="name"
-                            type="text"
-                            {...register("name")}
-                            required
-                        />
+                        <WithLabel name="name">
+                            <Input id="name" name="name" {...register("name")} errors={errors} />
+                        </WithLabel>
                     </div>
                     <div className="my-4">
-                        <label className="block my-2" htmlFor="email">
-                            Email
-                        </label>
-                        <input
-                            className="border-black border-2 p-2 w-full focus:outline-orange-400"
-                            id="email"
-                            type="email"
-                            {...register("email")}
-                            required
-                        />
+                        <Input id="email" name="email" placeholder="Enter your email" {...register("email")} errors={errors} />
                     </div>
-                    <button className="w-full py-2 hover:bg-amber-400 active:scale-[0.9] bg-amber-300 my-4 cursor-pointer">
+
+                    <Button>
                         Submit
-                    </button>
+                    </Button>
+                    <div className="text-sm text-gray-500">
+                        By clicking "Submit" you agree to our <span className="text-orange-400">Terms of Service</span> and <span className="text-orange-400">Privacy Policy</span>.
+                    </div>
                 </form>
             </main>
         </>
